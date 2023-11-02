@@ -21,11 +21,11 @@ Sound effects: Epic announcements of legal concepts (e.g. "Habius Corpus," "Affi
 Fonts: Will want serrif, legal document looking script.
 
 ## Software
-Unity 2021.3.7f1
-Blender 3.6
-Gimp 2.10.24
-Mixcraft 9
+Unity 2021.3.7f1  
+Blender 3.6  
+Gimp 2.10.24  
+Mixcraft 9  
 
 
-###License
+### License
 *Scales of Justice* is licensed under the MIT license.
