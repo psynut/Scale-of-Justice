@@ -1,9 +1,20 @@
 fileFormatVersion: 2
-guid: 4520284b76378784f9002f94553132d0
+guid: de94e838d5ae41f45a0ed537f87f3f1e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor00
+    second: {fileID: -5852396969495246356, guid: 152e76070c2fcbe4792c9241d25730c8,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint
+    second: {fileID: 2100000, guid: 72ad7f95619544f4998cab25f44407ff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
