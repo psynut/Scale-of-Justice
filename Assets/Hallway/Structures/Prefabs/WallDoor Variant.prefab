@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 074573851f3db6746b0b439ff379473d,
         type: 3}
       propertyPath: m_Name
-      value: WallDoor
+      value: WallDoor Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 074573851f3db6746b0b439ff379473d, type: 3}
