@@ -64,13 +64,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 55957831cb482b148b7eb339befafd4c,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 55957831cb482b148b7eb339befafd4c,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 60dfb0b815d9e6c479e10ef58b6ce679, type: 2}
     - target: {fileID: 919132149155446097, guid: 55957831cb482b148b7eb339befafd4c,
         type: 3}
       propertyPath: m_Name
-      value: WallPlainA
+      value: WallPlainA Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55957831cb482b148b7eb339befafd4c, type: 3}
+--- !u!1 &5100218450522902661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 55957831cb482b148b7eb339befafd4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5334219611212787156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7997348902038373441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100218450522902661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0030480004, y: 0.018288003, z: 0.024384005}
+  m_Center: {x: 0.001524, y: 0.009144002, z: 0.0121920025}

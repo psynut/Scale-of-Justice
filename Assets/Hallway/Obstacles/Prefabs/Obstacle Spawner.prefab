@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &257790615989241388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257790615989241386}
+  - component: {fileID: 257790615989241389}
+  m_Layer: 0
+  m_Name: Obstacle Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &257790615989241386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257790615989241388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257790615989241389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257790615989241388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d0e54f0807d6248bf4e68c9b06c4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 2553755894862916736, guid: be0e2ebfa027e814fbca4eda3e360374, type: 3}
+  - {fileID: 6099068234650415852, guid: a3b8f3c1d7f29cc498f5248a6047740e, type: 3}
+  - {fileID: 5038448117128035341, guid: 323f3a724fc4eb84db516f5f6b84e6f4, type: 3}
+  - {fileID: 3131189971422263687, guid: de9e0c80a472e1e48922bc857d664d81, type: 3}
+  - {fileID: 1494779249426007056, guid: c33d1f80276ab38408383c8fee55e6cb, type: 3}
+  - {fileID: 5643358393404267008, guid: 53b4b5fb2305c3942bb7c491cf4cebf5, type: 3}
+  - {fileID: 834085704263981899, guid: 49f35867b91b20b41b5f2049cb3abb17, type: 3}
+  - {fileID: 184760475726799735, guid: 47757c2c187a6894e951042f79c4cb2c, type: 3}

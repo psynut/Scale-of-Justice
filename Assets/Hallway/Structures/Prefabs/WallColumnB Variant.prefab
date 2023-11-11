@@ -64,6 +64,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c3a8a57502ccb694c94bd64c3d4a9d2b,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c3a8a57502ccb694c94bd64c3d4a9d2b,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 64dd36c25e58cd543a7f534bf5b83ba2, type: 2}
@@ -80,7 +85,27 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c3a8a57502ccb694c94bd64c3d4a9d2b,
         type: 3}
       propertyPath: m_Name
-      value: WallColumnB
+      value: WallColumnB Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a8a57502ccb694c94bd64c3d4a9d2b, type: 3}
+--- !u!1 &4213099962371736536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c3a8a57502ccb694c94bd64c3d4a9d2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3942507616142114441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4815670097994020960
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213099962371736536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2531285448133194250, guid: c3a8a57502ccb694c94bd64c3d4a9d2b, type: 3}

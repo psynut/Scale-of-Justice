@@ -64,6 +64,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c16ef330e37e7c9479e8003658e3eb43,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c16ef330e37e7c9479e8003658e3eb43,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: be7e1ba5998dad04e8cde8003b2596d5, type: 2}
@@ -80,7 +85,26 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c16ef330e37e7c9479e8003658e3eb43,
         type: 3}
       propertyPath: m_Name
-      value: WallLight
+      value: WallLight Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c16ef330e37e7c9479e8003658e3eb43, type: 3}
+--- !u!1 &8172439378185744600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c16ef330e37e7c9479e8003658e3eb43,
+    type: 3}
+  m_PrefabInstance: {fileID: 9055401300134579593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7773526316490179127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8172439378185744600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004633204, y: 0.018288003, z: 0.024384005}
+  m_Center: {x: 0.0007313981, y: 0.009144002, z: 0.0121920025}
