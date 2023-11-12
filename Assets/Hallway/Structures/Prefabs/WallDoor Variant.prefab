@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 351113943050553797}
   - component: {fileID: 8741773665236161003}
   - component: {fileID: 6351984253550234598}
+  - component: {fileID: 1865842514730136958}
   m_Layer: 0
   m_Name: Highlighter Sphere
   m_TagString: Untagged
@@ -97,6 +98,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5000002
   m_Center: {x: 2.8760214e-20, y: 4.2632564e-14, z: -0.0000019073495}
+--- !u!114 &1865842514730136958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47908626400132813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd28e6d5767fd6c41acc1a97ab07fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3021499639654694943
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,3 +624,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlighterSphere: {fileID: 960922809914194245}
   highlightSpinSpeed: 40
+  MissionComplete:
+    m_PersistentCalls:
+      m_Calls: []

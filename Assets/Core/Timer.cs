@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float remainingTime = startTime + countDown - Time.time;
+        float remainingTime = RemainingTime();
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         int miliseconds = (int)((remainingTime % 1) * 100f);
@@ -55,6 +55,10 @@ public class Timer : MonoBehaviour
     public void StartTimer(float m_time) {
         startTime = Time.time;
         countDown = m_time;
+    }
+
+    public float RemainingTime() {
+        return startTime + countDown - Time.time;
     }
 
 }

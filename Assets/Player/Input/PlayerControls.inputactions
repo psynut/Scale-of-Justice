@@ -650,6 +650,98 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "FunctionControls",
+            "id": "da7b1942-c60e-4daf-8b5a-5cb3d52949e3",
+            "actions": [
+                {
+                    "name": "AdjustSEVolume",
+                    "type": "Value",
+                    "id": "075e0b08-f344-46bd-a645-c5a784b44c64",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "AdjustMusicVolume",
+                    "type": "Value",
+                    "id": "6e3e13d9-8f52-4ada-972c-59a928272495",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Axis",
+                    "id": "05c3354f-c0cc-44ad-8cea-3d9b87c16c0e",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdjustMusicVolume",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "52d89455-236e-46ef-bda6-1d22403dbb1a",
+                    "path": "<Keyboard>/leftBracket",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdjustMusicVolume",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d1144422-37db-4edf-b62a-3cb62930ca69",
+                    "path": "<Keyboard>/rightBracket",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdjustMusicVolume",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Axis",
+                    "id": "f213bcc8-7b5d-4608-98a3-fff2b436ce8b",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdjustSEVolume",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f53b48b1-c283-4b44-8166-65b19e6bd201",
+                    "path": "<Keyboard>/minus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdjustSEVolume",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "bd51f15f-b17f-4c0c-b7e4-86f58966d855",
+                    "path": "<Keyboard>/equals",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AdjustSEVolume",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
         }
     ],
     "controlSchemes": []
