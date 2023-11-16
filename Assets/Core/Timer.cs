@@ -15,7 +15,9 @@ public class Timer : MonoBehaviour
     private float startTime;
 
     private void Awake() {
-
+        if(TimeUp == null) {
+            TimeUp = new UnityEvent();
+        }
     }
 
     // Start is called before the first frame update
@@ -36,8 +38,7 @@ public class Timer : MonoBehaviour
             if(text.color != Color.white) {
                 text.color = Color.white;
             }
-
-                text.text = $"{minutes}:{seconds}";
+            text.text = $"{minutes}:" + seconds.ToString("00");
         } else if(remainingTime > 0) {
             if(text.color != Color.yellow) {
                 text.color = Color.yellow;

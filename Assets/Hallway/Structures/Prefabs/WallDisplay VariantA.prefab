@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8441991848081378960}
   - component: {fileID: 8508606348070007563}
   - component: {fileID: 4000160926337801951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3863221117648834901}
   - component: {fileID: 1238106875777070767}
   - component: {fileID: 2215236561683158737}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,6 +304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallDisplay VariantA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7ed73cf22f38c249b3285086eb150de,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ed73cf22f38c249b3285086eb150de, type: 3}

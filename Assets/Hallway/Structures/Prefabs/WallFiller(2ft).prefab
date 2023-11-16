@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5445390929494206164}
   - component: {fileID: 5445390929494206163}
   - component: {fileID: 5445390929494206162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5445390931255400220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallFiller(2ft)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

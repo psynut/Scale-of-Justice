@@ -24,6 +24,5 @@ public class Obstacle : MonoBehaviour
         foreach(ParticleSystem psystem in particleSystems) {
             psystem.Play();
         }
-        Debug.Log("Player hit collider");
     }
 }

@@ -18,7 +18,6 @@ public class CourtRoomDoor : MonoBehaviour
     void Start()
     {
         highlighterSphere.gameObject.SetActive(false);
-        Debug.Log("HighlighterSphere is off");
     }
 
     // Update is called once per frame
@@ -33,7 +32,6 @@ public class CourtRoomDoor : MonoBehaviour
         Debug.Log($"{this.name} running Highlight({m_bool}");
         highlighted = m_bool;
         highlighterSphere.gameObject.SetActive(m_bool);
-        Debug.Log("HighlighterSphere is " + m_bool);
     }
 
     public void PlayerArrived() {

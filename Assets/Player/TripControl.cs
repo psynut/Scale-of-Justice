@@ -21,12 +21,10 @@ public class TripControl : MonoBehaviour
         animator.enabled = true;
         playerMovement.enabled = false;
         animator.SetTrigger("Trip");
-        Debug.Log("Tripped");
     }
 
     public void ReenablePlayerMovement() {
         playerMovement.enabled = true;
-        Debug.Log("Player Standing");
         animator.enabled = false;
     }
 

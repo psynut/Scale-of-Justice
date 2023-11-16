@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPlainA Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55957831cb482b148b7eb339befafd4c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55957831cb482b148b7eb339befafd4c, type: 3}
 --- !u!1 &5100218450522902661 stripped
