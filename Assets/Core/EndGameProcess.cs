@@ -20,6 +20,7 @@ public class EndGameProcess : MonoBehaviour {
 
 
     public void ReturnToMenu() {
+        ScoreManager.MissionTally = 0;
         StartCoroutine(DelayForMenu());
     }
 

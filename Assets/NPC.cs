@@ -39,14 +39,12 @@ public class NPC : MonoBehaviour
         if(!idle) {
             Walk();
         } else {
-            Debug.Log("idle");
         }
         animator.SetFloat("Speed", rb.velocity.magnitude);
     }
 
     private void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Wall")){
-            //currentdirection = RandomDirection();
             StartCoroutine("Pause");
         }
     }
@@ -56,9 +54,6 @@ public class NPC : MonoBehaviour
     }
 
     private void Walk() {
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        Debug.Log("walk");
-        //rb.AddForce(transform.TransformDirection(Vector3.forward)*speed, ForceMode.VelocityChange);
         rb.AddForce(transform.forward * speed,ForceMode.VelocityChange);
     }
 

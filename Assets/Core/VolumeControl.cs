@@ -25,7 +25,6 @@ public class VolumeControl : MonoBehaviour
             musicVolume = value;
             PlayerPrefs.SetFloat(MUSIC_VOLUME_KEY,value);
             musicPlayer.AdjustMusicVolume(value);
-            Debug.Log("MusicVolume adjusting to" + value);
         } 
     }
 

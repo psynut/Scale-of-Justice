@@ -76,10 +76,15 @@ MonoBehaviour:
   musicLevelCommands:
   - songs: []
     command: 0
-  - songs: []
-    command: 0
-  - songs: []
-    command: 0
+  - songs:
+    - {fileID: 8300000, guid: 2eb4da746593c66488cd5350b8c61e63, type: 3}
+    command: 2
+  - songs:
+    - {fileID: 8300000, guid: fbb829b23a067804bb2d57c92ba1d2ac, type: 3}
+    command: 2
+  - songs:
+    - {fileID: 8300000, guid: eb4dba599d43a49448140f9a84ed9478, type: 3}
+    command: 2
 --- !u!82 &9062653186033774296
 AudioSource:
   m_ObjectHideFlags: 0

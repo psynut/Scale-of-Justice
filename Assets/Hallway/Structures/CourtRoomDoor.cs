@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class CourtRoomDoor : MonoBehaviour
 {
     [SerializeField]
+    private GameObject mapIcons;
+    [SerializeField]
     private Transform highlighterSphere;
     [SerializeField]
     private float highlightSpinSpeed = 4f;
@@ -17,6 +19,7 @@ public class CourtRoomDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mapIcons.SetActive(false);
         highlighterSphere.gameObject.SetActive(false);
     }
 
@@ -29,8 +32,8 @@ public class CourtRoomDoor : MonoBehaviour
     }
 
     public void Highlight(bool m_bool) {
-        Debug.Log($"{this.name} running Highlight({m_bool}");
         highlighted = m_bool;
+        mapIcons.SetActive(m_bool);
         highlighterSphere.gameObject.SetActive(m_bool);
     }
 

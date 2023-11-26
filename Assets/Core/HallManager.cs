@@ -20,6 +20,7 @@ public class HallManager : MonoBehaviour
     [Tooltip("Time for each mission will be calculated by distance * MissionTimeFactor / # of missions")]
     private float missionTimeFactor = 1f;
     [SerializeField]
+    [Range(1, 10)]
     private int chanceForMiniGame = 0;
 
     private PlayerMovement player;
@@ -27,12 +28,15 @@ public class HallManager : MonoBehaviour
     private CourtRoomDoor[] courtRoomDoors;
     private CourtRoomDoor goal;
     private Vector3 previousGoalVec3;
+    private Vector3 currentGoalVec3; //Location of goal is going null for unknown reason. Storing position for reference at next start mission.
 
     const string characters = "ABCDEF1234567890";
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(this.name + " Start() called " + Time.time);
+        previousGoalVec3 = Vector3.zero;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         timer = GetComponent<Timer>();
         if(ScoreManager.Score == 0 || ScoreManager.Score == null) {
@@ -53,11 +57,10 @@ public class HallManager : MonoBehaviour
         
     }
 
-    public void StartMission() {
+    private void StartMission() {
+        Debug.Log("StartMission called " + Time.time.ToString());
         ScoreManager.MissionTally += 1;
-        if(ScoreManager.MissionTally == 1) {
-            previousGoalVec3 = Vector3.zero;
-        } else {
+        if(previousGoalVec3 != Vector3.zero) {
             previousGoalVec3 = goal.transform.position;
         }
         goal = courtRoomDoors[Random.Range(0,courtRoomDoors.Length)];
@@ -83,7 +86,7 @@ public class HallManager : MonoBehaviour
     public void MissionComplete() {
         TallyScore();
         int rnd = Random.Range(0,chanceForMiniGame);
-        if(rnd == 1) {
+        if(rnd == 0) {
             StartMiniGame();
         } else {
             StartMission();
@@ -91,7 +94,15 @@ public class HallManager : MonoBehaviour
     }
 
     public void StartMiniGame() {
-        //TODO
+        ScoreManager.MissionTally += 1;
+        canvasAnimator.SetTrigger("Minigame");
+        timer.PauseTime(true);
+        StartCoroutine(LoadCourtHouseScene());
+    }
+
+    private IEnumerator LoadCourtHouseScene() {
+        yield return new WaitForSeconds(4f);
+        FindObjectOfType<Scene_Manager>().LoadScene("Courtroom");
     }
 
     public void TallyScore() {

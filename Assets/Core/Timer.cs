@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
     private float countDown = 0; //Will use miliseconds;
     private float startTime;
 
+    private bool paused = false;
+
     private void Awake() {
         if(TimeUp == null) {
             TimeUp = new UnityEvent();
@@ -29,6 +31,9 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(paused) {
+            countDown += Time.deltaTime;
+        }
         float remainingTime = RemainingTime();
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
@@ -53,9 +58,13 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public void StartTimer(float m_time) {
+    public void StartTimer(float seconds) {
         startTime = Time.time;
-        countDown = m_time;
+        countDown = seconds;
+    }
+
+    public void PauseTime(bool m_bool) {
+        paused = m_bool;
     }
 
     public float RemainingTime() {

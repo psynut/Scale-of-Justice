@@ -1,0 +1,4 @@
+Funkeriffic
+from freepd.com/scoring.php
+Written by Bryan Tech
+CC0 per freepd
