@@ -9,6 +9,7 @@ public class MemoryGame : MonoBehaviour
 {
     public UnityEvent OnMatch;
     public UnityEvent OnNoMatch;
+    public UnityEvent OnGameComplete;
 
     [SerializeField]
     private Transform[] cardSpawnPoints;
@@ -19,14 +20,17 @@ public class MemoryGame : MonoBehaviour
     [SerializeField]
     private Camera m_Camera;
    
+    //Witness Impeachment does not fit on cards
     private List<string> phrases = new List<string>{"Probable Cause", "Illegal Search", "Alibi", "Motion to Supress", "Change of Venue", "Lessor Charge",
-                        "Surplusage", "Police Misconduct", "Lack of Intent", "Invoke Privilege", "Witness Impeachment",  "Defferred Disposition",
+                        "Surplusage", "Police Misconduct", "Lack of Intent", "Invoke Privilege", /*"Witness Impeachment",*/  "Defferred Disposition",
                         "Exculpatory Evidence"};
 
     private Vector2 mousePos;
     private GameObject cardPick1, cardPick2;
 
     private bool clickPause = false;
+
+    private int matchesLeft;
 
     private void Awake() {
 
@@ -42,6 +46,7 @@ public class MemoryGame : MonoBehaviour
         if(count % 2 != 0) {
             Debug.LogError("Need even set of cardSpawnPoints for " + this + " to properly set up Memory Game");
         }
+        matchesLeft = count / 2;
         for(int i=0; i < count/2; i++) {
             string phrase = phrases[Random.Range(0,phrases.Count)];
             int cardNo = Random.Range(0,cardSpawnPointList.Count);
@@ -82,6 +87,10 @@ public class MemoryGame : MonoBehaviour
                 cardPick2.GetComponent<Animator>().SetBool("Flip",true);
                 if(cardPick1.GetComponentInChildren<TMP_Text>().text == cardPick2.GetComponentInChildren<TMP_Text>().text) {
                     OnMatch?.Invoke();
+                    matchesLeft--;
+                    if(matchesLeft == 0) {
+                        OnGameComplete?.Invoke();
+                    }
                     Debug.Log("Cards Match!");
                     cardPick1 = null;
                     cardPick2 = null;

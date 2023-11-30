@@ -28,4 +28,23 @@ public class Scene_Manager : MonoBehaviour
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
     }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if(scene.buildIndex == 0) {
+            StartCoroutine(LoadNextAfterSeconds(5));
+        }
+    }
+
+    private IEnumerator LoadNextAfterSeconds(float seconds) {
+        yield return new WaitForSeconds(seconds);
+        LoadNextScene();
+    }
+
+    private void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }

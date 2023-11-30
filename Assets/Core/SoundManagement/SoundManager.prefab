@@ -77,8 +77,9 @@ MonoBehaviour:
   - songs: []
     command: 0
   - songs:
+    - {fileID: 8300000, guid: 78dad77e41c20c5418f482791a07b8f6, type: 3}
     - {fileID: 8300000, guid: 2eb4da746593c66488cd5350b8c61e63, type: 3}
-    command: 2
+    command: 3
   - songs:
     - {fileID: 8300000, guid: fbb829b23a067804bb2d57c92ba1d2ac, type: 3}
     command: 2

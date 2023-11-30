@@ -7,7 +7,7 @@ using TMPro;
 
 public class CourtroomGameManager : MonoBehaviour
 {
-    private enum MiniGame {Tangram}
+    private enum MiniGame {Tangram, Memory}
     MiniGame m_game;
 
     [SerializeField]
@@ -18,6 +18,11 @@ public class CourtroomGameManager : MonoBehaviour
     private TMP_Text addedScoreText;
     [SerializeField]
     private TangramCatcher tangramCatcher;
+    [SerializeField]
+    private MemoryGame memoryGame;
+
+    [SerializeField]
+    private GameObject[] miniGames;
 
     private Timer timer;
 
@@ -30,10 +35,11 @@ public class CourtroomGameManager : MonoBehaviour
     {
         ScoreManager.MissionTally += 1;
         m_game = (MiniGame)UnityEngine.Random.Range(0, Enum.GetNames(typeof(MiniGame)).Length);
-        Debug.Log(m_game.ToString());
+        Debug.LogWarning("Return here to make this random selection for minigame!");
+        miniGames[(int)m_game].SetActive(true);
         cameraAnimator.SetTrigger(m_game.ToString());
-
-        timer.StartTimer(200);
+        uIAnimator.SetTrigger(m_game.ToString());
+        timer.StartTimer(200-(15*ScoreManager.MissionTally));
     }
 
     // Update is called once per frame
