@@ -53,7 +53,7 @@ public class CourtroomGameManager : MonoBehaviour
     }
 
     public void OnMiniGameComplete() {
-        float m_score = ScoreManager.MissionTally / 3f * timer.RemainingTime()*200f;
+        float m_score = (ScoreManager.MissionTally / 3f) * timer.RemainingTime();
         timer.PauseTime(true);
         addedScoreText.text = $"{(int)m_score} pts.";
         uIAnimator.SetTrigger("Complete");
