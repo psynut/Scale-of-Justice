@@ -13,6 +13,10 @@ public class HallManager : MonoBehaviour
     [SerializeField]
     private TMP_Text scoreDisplay;
     [SerializeField]
+    private AudioClip success, fail;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
     Animator canvasAnimator;
 
 
@@ -84,6 +88,7 @@ public class HallManager : MonoBehaviour
     }
 
     public void MissionComplete() {
+        PlaySE(success);
         TallyScore();
         int rnd = Random.Range(0,chanceForMiniGame);
         if(rnd == 0) {
@@ -112,7 +117,13 @@ public class HallManager : MonoBehaviour
     }
 
     public void OutOfTime() {
+        PlaySE(fail);
         Destroy(player);
         GetComponent<EndGameProcess>().LoadPanel();
+    }
+
+    private void PlaySE(AudioClip audioClip) {
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
 }

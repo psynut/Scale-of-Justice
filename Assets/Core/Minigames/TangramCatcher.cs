@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class TangramCatcher : MonoBehaviour
 {
+
     [SerializeField]
     private Collider shuffleArea;
     [SerializeField]
@@ -20,6 +21,7 @@ public class TangramCatcher : MonoBehaviour
     private float rotationSpeed = 5f;
 
     public UnityEvent GameComplete;
+    public UnityEvent PieceClick;
     private TestingBoundary[] testingBoundaries;
 
     private Rigidbody selectedPiece;
@@ -85,12 +87,14 @@ public class TangramCatcher : MonoBehaviour
                 selectedPiece = hitInfo.collider.GetComponent<Rigidbody>();
                 selectedPiece.mass = 1f;
                 pieceSelected = true;
+                PieceClick?.Invoke();
             }
         } else {
             if(selectedPiece != null) {
                 StartCoroutine(SettlePiece(selectedPiece));
             }
             pieceSelected = false;
+            PieceClick?.Invoke();
         }
     }
 

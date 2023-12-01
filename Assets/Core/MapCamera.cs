@@ -27,14 +27,12 @@ public class MapCamera : MonoBehaviour
         if(player.position.y < 2f) {
 
             if(level != 1) {
-                Debug.Log($"Player position @ {player.position.y} and level was {level} now it's 1");
                 level = 1;
                 ChangeMapLevel();
             }
         } else if(player.position.y < 4.6f) {
 
             if(level != 2) {
-                Debug.Log($"Player position @ {player.position.y} and level was {level} now it's 2");
                 level = 2;
                 ChangeMapLevel();
             }
