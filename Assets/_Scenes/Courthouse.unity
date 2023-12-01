@@ -41610,13 +41610,13 @@ Transform:
   - {fileID: 947465321}
   - {fileID: 55128289}
   - {fileID: 12210234}
-  - {fileID: 1001591314}
   - {fileID: 448018407}
+  - {fileID: 1001591314}
   - {fileID: 206396726}
-  - {fileID: 1928510735}
-  - {fileID: 320788807}
-  - {fileID: 1973343176}
   - {fileID: 1506403535}
+  - {fileID: 320788807}
+  - {fileID: 1928510735}
+  - {fileID: 1973343176}
   - {fileID: 733346601}
   m_Father: {fileID: 2114950864}
   m_RootOrder: 7
@@ -71743,7 +71743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f077ccfc847ca6c4d8b225d2cce8d245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementPauseTime: 2.5
+  movementPauseTime: 3
 --- !u!95 &1711191687
 Animator:
   serializedVersion: 4

@@ -13,6 +13,7 @@ public class TripControl : MonoBehaviour
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
+        animator.enabled = false;
     }
 
     private void Start() {
@@ -24,6 +25,7 @@ public class TripControl : MonoBehaviour
         if(playerMovement != null) {            //Sometimes this is called when the End of Game process has already happened and destroys playerMovement.
             playerMovement.enabled = false;
         }
+        animator.enabled = true;
         animator.SetTrigger("Trip");
         Invoke(nameof(ReenablePlayerMovement),movementPauseTime);
     }
@@ -34,6 +36,7 @@ public class TripControl : MonoBehaviour
         if(playerMovement != null) {            //Sometimes this is called when the End of Game process has already happened and destroys playerMovement.
             playerMovement.enabled = true;
         }
+        animator.enabled = false;
     }
 
 }
